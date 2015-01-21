@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>Pairwise Comparison Library</title>
+		<meta name="generator" content="Bootply" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!--[if lt IE 9]>
+			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="css/styles.css" rel="stylesheet">
+
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/mathjs/1.2.0/math.min.js"></script>
+		<script src="http://www.numericjs.com/lib/numeric-1.2.6.min.js"></script>
+		<script src="js/pcm.js"></script>
+                               <script>
+									function print(value) {
+									var precision = 14;
+									document.write(math.format(value, precision) + '<br>');
+									}
+
+									var A = [[1,2,3],[4,5,6],[7,3,9]];
+								</script>
+                            </h4>		
+	</head>
+	<body>
+<div class="wrapper">
+    <div class="box">
+        <div class="row">
+          
+            <!-- sidebar -->
+            <div class="column col-sm-3" id="sidebar">
+                <a class="logo" href="#">PC</a>
+                <ul class="nav">
+                    <li><h1>Pairwise Comparison Library in JS</h1></li>
+                </ul>
+                <ul class="nav hidden-xs" id="sidebar-footer">
+                    <li>
+                      <a href="http://www.bootply.com"><h4>Theme</h4>Made by Bootply</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /sidebar -->
+          
+            <!-- main -->
+            <div class="column col-sm-9" id="main">
+                <div class="padding">
+                    <div class="full col-sm-9">
+                      
+                        <!-- content -->
+                        
+                        <div class="col-sm-12" id="featured">   
+                          <div class="page-header text-muted">
+                          About Pairwise Comparison Method
+                          </div> 
+                        </div>
+                        
+                        <!--/top story-->
+                        <div class="row">    
+                          <div class="col-sm-10">
+                            <p>Pairwise comparison generally refers to any process of comparing entities in pairs to judge which of each entity is preferred, or has a greater amount of some quantitative property. The method of pairwise comparison is used in the scientific study of preferences, attitudes, voting systems, social choice, public choice, and multiagent AI systems.</p>
+                            <small class="text-muted"><a href="http://www.kulakowski.org/doku.php?id=profi:research:pcpackage" class="text-muted">Check out PCPackage at Raspberry  Pi</a> | <a href="#" class="text-muted">Check out PCPackage in JS</a></small> 
+                          </div>
+                          <div class="col-sm-2">
+                            <a href="#" class="pull-right"><img src="https://scontent-b-lhr.xx.fbcdn.net/hphotos-xfp1/v/t1.0-9/10154273_10201715661653239_5035866819992465459_n.jpg?oh=ac076c95d71c63ab5b08744a15127ef7&oe=552BDFB0" class="img-circle"></a>
+                          </div> 
+                        </div>
+                        
+                        <div class="col-sm-12" id="stories">  
+                          <div class="page-header text-muted divider">
+                            Pairwise Comparison Library in Javascript
+                          </div>
+                        </div>
+
+                        
+                        <div class="row">    
+                          <div class="col-sm-10">
+                            <h3>PrincipalEigenValue</h3>
+							<p>Returns the largest principal eigenvalue of M.</p>
+							<script>print(PCMethod.PrincipalEigenValue(A));</script>
+                          </div>
+                        </div>
+                        
+                        <div class="row">    
+                          <div class="col-sm-10">
+                            <h3>PrincipalEigenVector</h3>
+							<p>Returns the eigenvector of M corresponding to its principal eigenvalue</p>
+							<script>print(PCMethod.PrincipalEigenVector(A));</script>
+                          </div>
+                        </div>
+						
+                        <div class="row">    
+                          <div class="col-sm-10">
+                            <h3>SaatyIdx</h3>
+							<p>Returns the value of the Saaty Inconsistency Index computed for the matrix M</p>
+							<script>print(PCMethod.SaatyIdx(A));</script>
+                          </div>
+                        </div>
+                        
+                       <div class="row">
+                          <div class="col-sm-10">
+                            <h3>EigenvalueRank</h3>
+                              <p>Returns the principal eigen vector of M rescalled in a way that the sum of its entries is 1</p>
+							<script>print(PCMethod.EigenvalueRank(A));</script>
+                          </div>
+                        </div>
+                        
+                        <div class="row divider">    
+                           <div class="col-sm-12"><hr></div>
+                        </div>
+						
+                        <div class="row">    
+                          <div class="col-sm-10">
+                            <h3>GeometricRank</h3>
+                              <p>Returns rank list given as geometric means of rows of the matrix M</p>
+							<script>print(PCMethod.GeometricRank(A));</script>
+                          </div>
+                        </div>
+
+                        <div class="row">    
+                          <div class="col-sm-10">
+                            <h3>GeometricRescaledRank</h3>
+                              <p>Returns a geometric mean rank list of M rescalled in a way that the sum of its entries is 1</p>
+							<script>print(PCMethod.GeometricRescaledRank(A));</script>
+                          </div>
+                        </div>
+                        
+                        <div class="row divider">    
+                           <div class="col-sm-12"><hr></div>
+                        </div>
+
+                        <div class="row">    
+                          <div class="col-sm-10">
+                            <h3>HREConstantTermVector</h3>
+							<script>print(PCMethod.HREConstantTermVector(A, [1,0,0]));</script>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <h3>HREMatrix</h3>
+                                <script>print(PCMethod.HREMatrix(A, [1,0,0]));</script>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <h3>HREPartialRank</h3>
+                                <script>print(PCMethod.HREPartialRank(A, [1,0,0]));</script>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <h3>HREFullRank</h3>
+                                <script>print(PCMethod.HREFullRank(A, [1,0,0]));</script>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <h3>HRERescaledRank</h3>
+                                <script>print(PCMethod.HRERescaledRank(A, [1,0,0]));</script>
+                            </div>
+                        </div>
+
+                        <div class="row divider">
+                            <div class="col-sm-12"><hr></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <h3>HREGeomConstantTermVector</h3>
+                                <script>print(PCMethod.HREGeomConstantTermVector(A, [1,0,0]));</script>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <h3>HREGeomMatrix</h3>
+                                <script>print(PCMethod.HREGeomMatrix(A, [1,0,0]));</script>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <h3>HREGeomIntermediateRank</h3>
+                                <script>print(PCMethod.HREGeomIntermediateRank(A, [1,0,0]));</script>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <h3>HREGeomPartialRank</h3>
+                                <script>print(PCMethod.HREGeomPartialRank(A, [1,0,0]));</script>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <h3>HREGeomFullRank</h3>
+                                <script>print(PCMethod.HREGeomFullRank(A, [1,0,0]));</script>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <h3>HREGeomRescaledRank</h3>
+                                <script>print(PCMethod.HREGeomRescaledRank(A, [1,0,0]));</script>
+                            </div>
+                        </div>
+
+                        <div class="row divider">
+                            <div class="col-sm-12"><hr></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <h3>RecreatePCMatrix</h3>
+                                <script>print(PCMethod.RecreatePCMatrix([[1,2,3],[0,4,5],[0,0,6]]));</script>
+                            </div>
+                        </div>
+
+                        <div class="row divider">
+                            <div class="col-sm-12"><hr></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <h3>COP1Violation</h3>
+                                <script>print(PCMethod.COP1Violation(A, [1,0,0]));</script>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-10">
+                                <h3>COP2Violation</h3>
+                                <script>print(PCMethod.COP2Violation(A, [1,0,0]));</script>
+                            </div>
+                        </div>
+
+						<hr>
+                      
+                        <div class="row" id="footer">    
+                          <div class="col-sm-6">
+                            
+                          </div>
+                          <div class="col-sm-6">
+                            <p>
+                            <a href="#" class="pull-right">©Copyright Inc.</a>
+                            </p>
+                          </div>
+                        </div>
+                      
+                      <hr>
+                      
+                      <h3 class="text-center">
+                      <a href="http://bootply.com/" target="ext">Made by Bootply</a>
+                      </h3>
+                        
+                      <hr>
+                        
+                      
+                    </div><!-- /col-9 -->
+                </div><!-- /padding -->
+            </div>
+            <!-- /main -->
+          
+        </div>
+    </div>
+</div>
+	<!-- script references -->
+
+	
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+	</body>
+</html>
